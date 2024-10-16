@@ -503,4 +503,8 @@
     color: #707070;
     font-size: 13px;
   }
-  
+  .site-plan :hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
