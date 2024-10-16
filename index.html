@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Makaan - Real Estate HTML Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="" name="keywords" />
+        <meta content="" name="description" />
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon" />
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet" />
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet" />
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet" />
+        <style>
+            .nav-btn,
+            .close-btn {
+                cursor: pointer;
+                font-size: 20px;
+                margin: 10px;
+            }
+
+            #modalImage {
+                width: 100%;
+                max-height: 80vh;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="bg-white p-0">
+            <!-- Spinner Start -->
+            <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <!-- Spinner End -->
+
+            <!-- Navbar Start -->
+            <div class="container-fluid nav-bar bg-transparent">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                        <div class="icon p-2 me-2" style="border: none !important">
+                            <img class="img-fluid" src="img/logo.png" alt="Icon" style="height: 50px" />
+                        </div>
+                        <h1 class="m-0 text-primary">The Oso</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Property</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="property-list.html" class="dropdown-item">Property List</a>
+                                    <a href="property-type.html" class="dropdown-item">Property Type</a>
+                                    <a href="property-agent.html" class="dropdown-item">Property Agent</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                    <a href="404.html" class="dropdown-item">404 Error</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a class="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
+                    </div>
+                </nav>
+            </div>
+            <!-- Navbar End -->
+
+            <!-- Header Start -->
+            <div class="container-fluid header bg-white p-0">
+                <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                    <div class="col-md-6 p-5 mt-lg-5">
+                        <h1 class="display-5 animated fadeIn mb-4">Temukan Rumah <span class="text-primary">Sempurna</span> untuk Hidup Bersama Keluarga Anda</h1>
+                        <p class="animated fadeIn mb-4 pb-2">
+                            Temukan rumah yang luas, aman, dan nyaman untuk keluarga Anda: Tempat ideal di mana orang-orang tercinta Anda dapat tumbuh dan berkembang dalam lingkungan modern dan terencana dengan baik.
+                        </p>
+                        <a class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
+                    </div>
+                    <div class="col-md-6 animated fadeIn">
+                        <div class="owl-carousel header-carousel">
+                            <div class="owl-carousel-item">
+                                <img class="img-fluid" src="img/the-wise-1.jpeg" alt="" />
+                            </div>
+                            <div class="owl-carousel-item">
+                                <img class="img-fluid" src="img/produk/the trust/the trust (3).jpeg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header End -->
+
+            <!-- Category Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+                        <h1 class="mb-3">Fasilitas di The Oso</h1>
+                        <p>
+                            Selain hunian yang nyaman, pastikan rumah Anda memiliki fasilitas terbaik untuk menunjang kenyamanan hidup keluarga. The Oso menawarkan berbagai fasilitas unggulan yang dirancang untuk meningkatkan kualitas hidup
+                            Anda.
+                        </p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <a class="cat-item d-block bg-light text-center rounded p-3">
+                                <div class="rounded p-4">
+                                    <div class="icon mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                            <path
+                                                fill="#e3cd78"
+                                                d="M2 21v-2q.95 0 1.425-.5T5.3 18t1.925.5t1.425.5t1.425-.5T12 18t1.925.5t1.425.5t1.425-.5T18.7 18t1.875.5T22 19v2q-1.475 0-1.937-.5T18.7 20t-1.425.5t-1.925.5t-1.925-.5T12 20t-1.425.5t-1.925.5t-1.925-.5T5.3 20t-1.363.5T2 21m0-4.5v-2q.95 0 1.425-.5t1.875-.5t1.938.5t1.412.5q.9 0 1.425-.5T12 13.5t1.925.5t1.425.5t1.425-.5t1.925-.5t1.875.5t1.425.5v2q-1.475 0-1.937-.5t-1.363-.5t-1.388.5t-1.962.5q-1.425 0-1.937-.5T12 15.5q-.95 0-1.412.5t-1.938.5t-1.963-.5t-1.387-.5t-1.362.5T2 16.5m4.9-5.1l3.325-3.325l-1-1q-.825-.825-1.75-1.2T5.2 5.5V3q1.875 0 3.1.413T10.7 5l6.4 6.4q-.425.275-.825.438T15.35 12q-.9 0-1.425-.5T12 11t-1.925.5t-1.425.5q-.525 0-.925-.162T6.9 11.4M16.7 3q1.05 0 1.775.738T19.2 5.5q0 1.05-.725 1.775T16.7 8t-1.775-.725T14.2 5.5q0-1.025.725-1.763T16.7 3"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <h6>Kolam Renang</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <a class="cat-item d-block bg-light text-center rounded p-3">
+                                <div class="rounded p-4">
+                                    <div class="icon mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 640 512">
+                                            <path
+                                                fill="#e3cd78"
+                                                d="M400 0c5 0 9.8 2.4 12.8 6.4c34.7 46.3 78.1 74.9 133.5 111.5c5.2 3.4 10.5 7 16 10.6c28.9 19.2 45.7 51.7 45.7 86.1c0 28.6-11.3 54.5-29.8 73.4H221.8c-18.4-19-29.8-44.9-29.8-73.4c0-34.4 16.7-66.9 45.7-86.1c5.4-3.6 10.8-7.1 16-10.6c55.4-36.6 98.8-65.2 133.5-111.5c3-4 7.8-6.4 12.8-6.4M288 512v-72c0-13.3-10.7-24-24-24s-24 10.7-24 24v72h-48c-17.7 0-32-14.3-32-32V352c0-17.7 14.3-32 32-32h416c17.7 0 32 14.3 32 32v128c0 17.7-14.3 32-32 32h-48v-72c0-13.3-10.7-24-24-24s-24 10.7-24 24v72h-64v-58c0-19-8.4-37-23-49.2L400 384l-25 20.8C360.4 417 352 435 352 454v58zM70.4 5.2a15.9 15.9 0 0 1 19.2 0l16 12C139.8 42.9 160 83.2 160 126v2H0v-2C0 83.2 20.2 42.9 54.4 17.2zM0 160h160v136.6c-19.1 11.1-32 31.7-32 55.4v128c0 9.6 2.1 18.6 5.8 26.8c-6.6 3.4-14 5.2-21.8 5.2H48c-26.5 0-48-21.5-48-48z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <h6>Sarana Ibadah</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <a class="cat-item d-block bg-light text-center rounded p-3">
+                                <div class="rounded p-4">
+                                    <div class="icon mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                            <path
+                                                fill="#e3cd78"
+                                                d="M20 9H8.22A2.97 2.97 0 0 0 4 8.8c-.64.56-1 1.36-1 2.2v9a1 1 0 0 0-1 1v1h8v-1a1 1 0 0 0-1-1v-7h11a2 2 0 0 0 2-2a2 2 0 0 0-2-2M6 12.5A1.5 1.5 0 0 1 4.5 11A1.5 1.5 0 0 1 6 9.5A1.5 1.5 0 0 1 7.5 11A1.5 1.5 0 0 1 6 12.5m4.5-.5L9 10h1.5l1.5 2zm4 0L13 10h1.5l1.5 2zm4 0L17 10h1.5l1.5 2z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <h6>One Gate System</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <a class="cat-item d-block bg-light text-center rounded p-3">
+                                <div class="rounded p-4">
+                                    <div class="icon mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                            <path
+                                                d="M18.618 7.462L6.403 2.085a1.007 1.007 0 0 0-.77-.016a1.002 1.002 0 0 0-.552.537l-3 7a1 1 0 0 0 .525 1.313L9.563 13.9L8.323 17H4v-3H2v8h2v-3h4.323c.823 0 1.552-.494 1.856-1.258l1.222-3.054l3.419 1.465a1 1 0 0 0 1.311-.518l3-6.857a1 1 0 0 0-.513-1.316zm1.312 8.91l-1.858-.742l1.998-5l1.858.741z"
+                                                fill="#e3cd78"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <h6>CCTV 24 Jam</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <a class="cat-item d-block bg-light text-center rounded p-3">
+                                <div class="rounded p-4">
+                                    <div class="icon mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                            <g fill="none">
+                                                <g fill="#e3cd78" clip-path="url(#fluentEmojiHighContrastPlaygroundSlide0)">
+                                                    <path d="M3.5 14.047h3.314l-1.148-2.64A4 4 0 0 0 3.5 9.294zm0 4.969h5.483l-.052-.1l-1.24-2.852H3.5zm0 4.968h5.984V21.03H3.5z" />
+                                                    <path
+                                                        d="M10.836 1a4.65 4.65 0 0 0-3.082 1.164A4.669 4.669 0 0 0 0 5.672V29a2 2 0 0 0 2 2h1.5a2 2 0 0 0 2-2v-1h1.984v1a2 2 0 0 0 2 2h1.5a2 2 0 0 0 2-2v-5.872l3.155 6.722A2 2 0 0 0 17.95 31H30a2 2 0 0 0 1.816-2.837L27.267 18.3a6.52 6.52 0 0 0-5.9-3.78h-.136l-1.953-4.5a7.5 7.5 0 0 0-3.767-3.837v-.5A4.676 4.676 0 0 0 10.836 1m0 2a2.67 2.67 0 0 1 2.672 2.672v1.942a5.5 5.5 0 0 1 3.932 3.2l2.476 5.7h1.448a4.5 4.5 0 0 1 4.087 2.616L30 29h-1.652L24.2 20l-.111-.24a3 3 0 0 0-2.725-1.744h-1.776A1 1 0 0 1 19.41 18a1 1 0 0 1-.74-.586l-2.607-6.006A4 4 0 0 0 12.394 9h-.363v-.016l-.023.012V5.672a1.172 1.172 0 0 0-2.344 0v3.312l-1.5-.001V5.672A2.67 2.67 0 0 1 10.836 3M7.344 8.982l-1.5-.001V5.67a1.172 1.172 0 0 0-2.344 0v2.04c.85.242 1.629.68 2.271 1.287a5.5 5.5 0 0 1 1.27 1.815L10.17 18l.007.016v.002h1.448a4.9 4.9 0 0 1 1.99.593c.994.586 1.843 1.533 2.294 2.511L19.601 29H17.95l-3.4-7.25a3.82 3.82 0 0 0-2.922-2.234h-.641V29h-1.5v-3H3.5v3H2V5.672a2.672 2.672 0 0 1 5.344 0z"
+                                                    />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="fluentEmojiHighContrastPlaygroundSlide0"><path fill="#fff" d="M0 0h32v32H0z" /></clipPath>
+                                                </defs>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <h6>Playground Kids</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <a class="cat-item d-block bg-light text-center rounded p-3">
+                                <div class="rounded p-4">
+                                    <div class="icon mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                            <g fill="#e3cd78" stroke="#fff" stroke-width="1.5">
+                                                <path d="M12 5h9.4a.6.6 0 0 1 .6.6v12.8a.6.6 0 0 1-.6.6H12m0-14H2.6a.6.6 0 0 0-.6.6v12.8a.6.6 0 0 0 .6.6H12m0-14v14" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15a3 3 0 1 1 0-6a3 3 0 0 1 0 6M2 17A5 5 0 0 0 2 7m20 10a5 5 0 0 1 0-10" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <h6>Lapangan Serbaguna</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <a class="cat-item d-block bg-light text-center rounded p-3">
+                                <div class="rounded p-4">
+                                    <div class="icon mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                            <g fill="none">
+                                                <path
+                                                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                                                />
+                                                <path
+                                                    fill="#e3cd78"
+                                                    d="M12 16.5a1.5 1.5 0 0 1 1.493 1.356L13.5 18v2a1.5 1.5 0 0 1-2.993.145L10.5 20v-2a1.5 1.5 0 0 1 1.5-1.5M8.364 2.545a1.5 1.5 0 0 1 1.091 1.819l-4 16a1.5 1.5 0 0 1-2.91-.728l4-16a1.5 1.5 0 0 1 1.819-1.091m9.091 1.091l4 16a1.5 1.5 0 1 1-2.91.728l-4-16a1.5 1.5 0 0 1 2.91-.728M12 9.5a1.5 1.5 0 0 1 1.5 1.5v2a1.5 1.5 0 0 1-3 0v-2A1.5 1.5 0 0 1 12 9.5m0-7a1.5 1.5 0 0 1 1.493 1.356L13.5 4v2a1.5 1.5 0 0 1-2.993.145L10.5 6V4A1.5 1.5 0 0 1 12 2.5"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <h6>Row jalan 8 Meter</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <a class="cat-item d-block bg-light text-center rounded p-3">
+                                <div class="rounded p-4">
+                                    <div class="icon mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                            <path
+                                                fill="#e3cd78"
+                                                d="M21.8 13H20v8h-7v-3.33l2.79-2.79l.71.12a2.1 2.1 0 1 0 0-4.2a2.1 2.1 0 0 0-2.1 2.1l.1.71l-1.5 1.52V9.65c.66-.36 1.1-1.05 1.1-1.85A2.1 2.1 0 0 0 12 5.7a2.1 2.1 0 0 0-2.1 2.1c0 .8.44 1.49 1.1 1.85v5.48l-1.5-1.52l.1-.71a2.1 2.1 0 0 0-2.1-2.1a2.1 2.1 0 0 0-2.1 2.1A2.1 2.1 0 0 0 7.5 15l.71-.12L11 17.67V21H4v-8H2.25c-.42 0-.83 0-.83-.21c.01-.22.43-.64.86-1.07L11 3c.33-.33.67-.67 1-.67s.67.34 1 .67l4 4V6h2v3l2.78 2.78c.4.4.81.81.82 1.02c0 .2-.4.2-.8.2M7.5 12a.9.9 0 0 1 .9.9a.9.9 0 0 1-.9.9a.9.9 0 0 1-.9-.9a.9.9 0 0 1 .9-.9m9 0c.5 0 .9.4.9.9s-.4.9-.9.9a.9.9 0 0 1-.9-.9a.9.9 0 0 1 .9-.9M12 6.9c.5 0 .9.4.9.9s-.4.9-.9.9s-.9-.4-.9-.9s.4-.9.9-.9"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <h6>Smart Home</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Category End -->
+
+            <!-- About Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                                <img class="img-fluid w-100" src="img/produk/the kaes/the kaes (2).jpeg" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                            <h1 class="mb-4">Tempat #1 Untuk Menemukan Properti Sempurna</h1>
+                            <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
+                            <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
+                            <a class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+            <!-- Property List Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="row g-0 gx-5 align-items-end">
+                        <div class="col-lg-6">
+                            <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
+                                <h1 class="mb-3">Produk Kami</h1>
+                                <p>The Oso menghadirkan perumahan meggunakan sistem cluster dengan teknologi smart home, memberikan Anda kontrol penuh atas keamanan dan kenyamanan rumah.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+                            <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                                <li class="nav-item me-2">
+                                    <a class="btn btn-outline-primary active" data-bs-toggle="pill" href="#tab-1">The Trust</a>
+                                </li>
+                                <li class="nav-item me-2">
+                                    <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-2">The Kaes</a>
+                                </li>
+                                <li class="nav-item me-0">
+                                    <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">The Wise</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="property-item card card-hover rounded overflow-hidden">
+                                        <div class="position-relative overflow-hidden">
+                                            <a><img class="img-fluid" src="img/produk/the trust/the trust (1).jpeg" alt="" /></a>
+                                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Ready</div>
+                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 X 15</div>
+                                        </div>
+                                        <div class="p-4 pb-0">
+                                            <h5 class="text-primary mb-3">Rp 815.000.000.-</h5>
+                                            <a class="d-block h5 mb-2">Type 48</a>
+                                        </div>
+                                        <div class="d-flex border-top border-bottom border-bottom">
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>lt 90m²,lb 48m²</small>
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
+                                            <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>1 Bath</small>
+                                        </div>
+                                        <div>
+                                            <div class="row gap-2 p-4">
+                                                <a class="btn btn-primary rounded w-100 col trigger-modal trigger-modal" data-cluster="The Trust" data-img="img/produk/the trust/the trust (1).jpeg" data-type="48">Detail</a>
+                                                <a class="btn btn-outline-success rounded w-100 col" onclick="wa('48')">Kontak</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                    <div class="property-item card rounded overflow-hidden">
+                                        <div class="position-relative overflow-hidden">
+                                            <a><img class="img-fluid" src="img/produk/the trust/the trust (4).jpeg" alt="" /></a>
+                                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Ready</div>
+                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">7 X 13</div>
+                                        </div>
+                                        <div class="p-4 pb-0">
+                                            <h5 class="text-primary mb-3">Rp 825.000.000.-</h5>
+                                            <a class="d-block h5 mb-2">Type 50</a>
+                                        </div>
+                                        <div class="d-flex border-top border-bottom">
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>lt 91m²,lb 50m²</small>
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
+                                            <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>1 Bath</small>
+                                        </div>
+                                        <div>
+                                            <div class="row gap-2 p-4">
+                                                <a class="btn btn-primary rounded w-100 col trigger-modal" data-cluster="The Trust" data-img="img/produk/the trust/the trust (4).jpeg" data-type="50">Detail</a>
+                                                <a class="btn btn-outline-success rounded w-100 col" onclick="wa('50')">Kontak</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                    <div class="property-item card rounded overflow-hidden">
+                                        <div class="position-relative overflow-hidden">
+                                            <a><img class="img-fluid" src="img/produk/the trust/the trust (5).jpeg" alt="" /></a>
+                                            <div class="rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: red">Sold Out</div>
+                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">7 X 15</div>
+                                        </div>
+                                        <div class="p-4 pb-0">
+                                            <h5 class="text-primary mb-3">Rp 860.000.000.-</h5>
+                                            <a class="d-block h5 mb-2">Type 56</a>
+                                        </div>
+                                        <div class="d-flex border-top border-bottom">
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>lt 105m²,lb 56m²</small>
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
+                                            <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>1 Bath</small>
+                                        </div>
+                                        <div>
+                                            <div class="row gap-2 p-4">
+                                                <a class="btn btn-primary rounded w-100 col trigger-modal" data-cluster="The Trust" data-img="img/produk/the trust/the trust (5).jpeg" data-type="56">Detail</a>
+                                                <a class="btn btn-outline-success rounded w-100 col" onclick="wa('56')">Kontak</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="property-item card rounded overflow-hidden">
+                                        <div class="position-relative overflow-hidden">
+                                            <a><img class="img-fluid" src="img/produk/the kaes/the kaes (6).jpeg" alt="" /></a>
+                                            <div class="rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: red">Sold Out</div>
+                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 X 12</div>
+                                        </div>
+                                        <div class="p-4 pb-0">
+                                            <h5 class="text-primary mb-3">Rp 760.000.000.-</h5>
+                                            <a class="d-block h5 mb-2">Type 44</a>
+                                        </div>
+                                        <div class="d-flex border-top border-bottom">
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Lt 72m²,Lb 44m²</small>
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
+                                            <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                        </div>
+                                        <div>
+                                            <div class="row gap-2 p-4">
+                                                <a class="btn btn-primary rounded w-100 col trigger-modal" data-type="44" data-img="img/produk/the kaes/the kaes (6).jpeg" data-cluster="The Kaes">Detail</a>
+                                                <a class="btn btn-outline-success rounded w-100 col" onclick="wa('44')">Kontak</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="property-item card rounded overflow-hidden">
+                                        <div class="position-relative overflow-hidden">
+                                            <a><img class="img-fluid" src="img/produk/the kaes/the kaes (4).jpeg" alt="" /></a>
+                                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Ready</div>
+                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 X 12</div>
+                                        </div>
+                                        <div class="p-4 pb-0">
+                                            <h5 class="text-primary mb-3">Rp 785.000.000.-</h5>
+                                            <a class="d-block h5 mb-2">Type 53</a>
+                                        </div>
+                                        <div class="d-flex border-top border-bottom">
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Lt 72m²,Lb 44m²</small>
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                            <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                        </div>
+                                        <div>
+                                            <div class="row gap-2 p-4">
+                                                <a class="btn btn-primary rounded w-100 col trigger-modal" data-img="img/produk/the kaes/the kaes (4).jpeg" data-type="53" data-cluster="The Kaes">Detail</a>
+                                                <a class="btn btn-outline-success rounded w-100 col" onclick="wa('53')">Kontak</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="property-item card rounded overflow-hidden">
+                                        <div class="position-relative overflow-hidden">
+                                            <a><img class="img-fluid" src="img/produk/the kaes/the kaes (2).jpeg" alt="" /></a>
+                                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Ready</div>
+                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 X 15</div>
+                                        </div>
+                                        <div class="p-4 pb-0">
+                                            <h5 class="text-primary mb-3">Rp 890.000.000.-</h5>
+                                            <a class="d-block h5 mb-2">Type 54</a>
+                                        </div>
+                                        <div class="d-flex border-top border-bottom">
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Lt 90m²,Lb 54m²</small>
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
+                                            <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                        </div>
+                                        <div>
+                                            <div class="row gap-2 p-4">
+                                                <a class="btn btn-primary rounded w-100 col trigger-modal" data-img="img/produk/the kaes/the kaes (2).jpeg" data-type="54" data-cluster="The Kaes">Detail</a>
+                                                <a class="btn btn-outline-success rounded w-100 col" onclick="wa()">Kontak</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="property-item card rounded overflow-hidden">
+                                        <div class="position-relative overflow-hidden">
+                                            <a><img class="img-fluid" src="img/produk/the wise/the wise (5).jpeg" alt="" /></a>
+                                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Ready</div>
+                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">6 X 13</div>
+                                        </div>
+                                        <div class="p-4 pb-0">
+                                            <h5 class="text-primary mb-3">Rp 650.000.000.-</h5>
+                                            <a class="d-block h5 mb-2">Type 36</a>
+                                        </div>
+                                        <div class="d-flex border-top border-bottom">
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Lb 36m²,Lt 62m²</small>
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
+                                            <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>1 Bath</small>
+                                        </div>
+                                        <div>
+                                            <div class="row gap-2 p-4">
+                                                <a class="btn btn-primary rounded w-100 col trigger-modal" data-img="img/produk/the wise/the wise (5).jpeg" data-type="36" data-cluster="The Wise">Detail</a>
+                                                <a class="btn btn-outline-success rounded w-100 col" onclick="wa('36')">Kontak</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="property-item card rounded overflow-hidden">
+                                        <div class="position-relative overflow-hidden">
+                                            <a><img class="img-fluid" src="img/produk/the wise/the wise (2).jpeg" alt="" /></a>
+                                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Ready</div>
+                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">7 X 12</div>
+                                        </div>
+                                        <div class="p-4 pb-0">
+                                            <h5 class="text-primary mb-3">Rp 770.000.000.-</h5>
+                                            <a class="d-block h5 mb-2">Type 38</a>
+                                        </div>
+                                        <div class="d-flex border-top border-bottom">
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Lb 38m²,Lt 84m²</small>
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
+                                            <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>1 Bath</small>
+                                        </div>
+                                        <div>
+                                            <div class="row gap-2 p-4">
+                                                <a class="btn btn-primary rounded w-100 col trigger-modal" data-type="38" data-img="img/produk/the wise/the wise (2).jpeg" data-cluster="The Wise">Detail</a>
+                                                <a class="btn btn-outline-success rounded w-100 col" onclick="wa('38')">Kontak</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="property-item card rounded overflow-hidden">
+                                        <div class="position-relative overflow-hidden">
+                                            <a><img class="img-fluid" src="img/produk/the wise/the wise (3).jpeg" alt="" /></a>
+                                            <div class="rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: red">Sold Out</div>
+                                            <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">8 X 12</div>
+                                        </div>
+                                        <div class="p-4 pb-0">
+                                            <h5 class="text-primary mb-3">Rp 815.000.000.-</h5>
+                                            <a class="d-block h5 mb-2">Type 42</a>
+                                        </div>
+                                        <div class="d-flex border-top border-bottom">
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Lb 42m²,Lt 96m²</small>
+                                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
+                                            <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>1 Bath</small>
+                                        </div>
+                                        <div>
+                                            <div class="row gap-2 p-4">
+                                                <a class="btn btn-primary rounded w-100 col trigger-modal" data-type="42" data-img="img/produk/the wise/the wise (3).jpeg" data-cluster="The Wise">Detail</a>
+                                                <a class="btn btn-outline-success rounded w-100 col" onclick="wa('42')">Kontak</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Property List End -->
+
+            <!-- Call to Action Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="bg-light rounded p-3">
+                        <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, 0.3)">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                                    <img class="img-fluid rounded w-100" src="img/call-to-action.jpg" alt="" />
+                                </div>
+                                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                                    <div class="mb-4">
+                                        <h1 class="mb-3">Kontak Dengan Marketing Kami</h1>
+                                        <p>Jika ada yang membingungkan, silakan hubungi marketing kami dengan mengklik tombol di bawah ini</p>
+                                    </div>
+                                    <a class="btn btn-success btn-lg rounded me-2" onclick="wa()"
+                                        ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                <path d="m3 21l1.65-3.8a9 9 0 1 1 3.4 2.9z" />
+                                                <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0za5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Call to Action End -->
+
+            <!-- Team Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+                        <h1 class="mb-3">Property Agents</h1>
+                        <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="team-item rounded overflow-hidden">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="img/team-1.jpg" alt="" />
+                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                        <a class="btn btn-square mx-1"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square mx-1"><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-square mx-1"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-center p-4 mt-3">
+                                    <h5 class="fw-bold mb-0">Full Name</h5>
+                                    <small>Designation</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="team-item rounded overflow-hidden">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="img/team-2.jpg" alt="" />
+                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                        <a class="btn btn-square mx-1"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square mx-1"><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-square mx-1"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-center p-4 mt-3">
+                                    <h5 class="fw-bold mb-0">Full Name</h5>
+                                    <small>Designation</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="team-item rounded overflow-hidden">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="img/team-3.jpg" alt="" />
+                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                        <a class="btn btn-square mx-1"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square mx-1"><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-square mx-1"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-center p-4 mt-3">
+                                    <h5 class="fw-bold mb-0">Full Name</h5>
+                                    <small>Designation</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="team-item rounded overflow-hidden">
+                                <div class="position-relative">
+                                    <img class="img-fluid" src="img/team-4.jpg" alt="" />
+                                    <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                        <a class="btn btn-square mx-1"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square mx-1"><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-square mx-1"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-center p-4 mt-3">
+                                    <h5 class="fw-bold mb-0">Full Name</h5>
+                                    <small>Designation</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Button trigger modal -->
+            <!-- Team End -->
+            <div class="modal fade" id="modal-img" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Foto Galeri</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="image-gallery"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" id="prev" onclick="prev()">Prev</button>
+                            <button type="button" class="btn btn-outline-success" id="next" onclick="next()">Next</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+                        <h1 class="mb-3">Kata Client Kami!</h1>
+                        <p>Berikut adalah beberapa testimoni dari beberapa client kami</p>
+                    </div>
+                    <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="testimonial-item bg-light rounded p-3">
+                            <div class="bg-white border rounded p-4">
+                                <p>Lingkungan perumahan bersih dan terawat, sangat cocok untuk keluarga</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px" />
+                                    <div class="ps-3">
+                                        <h6 class="fw-bold mb-1">Client Name</h6>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-light rounded p-3">
+                            <div class="bg-white border rounded p-4">
+                                <p>Desain rumahnya modern dan elegan, benar-benar sesuai dengan harapan kami</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px" />
+                                    <div class="ps-3">
+                                        <h6 class="fw-bold mb-1">Client Name</h6>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-light rounded p-3">
+                            <div class="bg-white border rounded p-4">
+                                <p>Lokasinya sangat strategis, hanya selangkah dari Surabaya Timur, memudahkan akses ke mana saja.</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px" />
+                                    <div class="ps-3">
+                                        <h6 class="fw-bold mb-1">Client Name</h6>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-light rounded p-3">
+                            <div class="bg-white border rounded p-4">
+                                <p>Proses pembelian di The Oso sangat mudah dan cepat. Semua Ready berjalan lancar, dan saya merasa terbantu dari awal hingga akhir.</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px" />
+                                    <div class="ps-3">
+                                        <h6 class="fw-bold mb-1">Client Name</h6>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-light rounded p-3">
+                            <div class="bg-white border rounded p-4">
+                                <p>Ruang tamu yang luas dengan lantai granit menambah kesan mewah</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px" />
+                                    <div class="ps-3">
+                                        <h6 class="fw-bold mb-1">Client Name</h6>
+                                        <small>Profession</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial End -->
+        </div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/logo.png" style="width: 40%" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="owl-carousel owl-theme data"></div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white">Info Kontak</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Perumahan The OSO</p>
+                        <p class="mb-2" onclick="wa()" style="cursor: pointer"><i class="fa fa-phone-alt me-3"></i>+62 812-3118-6234</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>perumtheoso.official@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a>Home</a>
+                                <a>Cookies</a>
+                                <a>Help</a>
+                                <a>FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <div class="floating_btn" style="cursor: pointer">
+            <a onclick="wa()">
+                <div class="contact_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                        <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="m3 21l1.65-3.8a9 9 0 1 1 3.4 2.9z" />
+                            <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0za5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+                        </g>
+                    </svg>
+                </div>
+            </a>
+            <p class="text_icon">Butuh bantuan?</p>
+        </div>
+
+        <div class="modal fade modal-tipe" id="modal-detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tipe <span id="tipe"></span></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="gallery-container">
+                                    <div class="main-image"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <h5>Spesifikasi</h5>
+                                        <ul class="features-list row" id="spesifikasi"></ul>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div id="table" class="table-responsive"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-primary btn-info-produk" data-id="roma">Info Lebih Lanjut</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script src="js/type.js"></script>
+        <script>
+            function wa(type = null) {
+                const now = new Date();
+
+                const hours = now.getHours();
+                const minutes = now.getMinutes();
+                const seconds = now.getSeconds();
+
+                var pesan;
+
+                if (hours > 6 && hours < 10) {
+                    pesan = "pagi";
+                } else if (hours > 10 && hours < 14) {
+                    pesan = "siang";
+                } else if (hours > 14 && hours < 18) {
+                    pesan = "sore";
+                } else {
+                    pesan = "malam";
+                }
+
+                if (type) {
+                    window.open(`https://wa.me/+6281231186234?text=Halo selamat ${pesan},saya mau tanya-tanya tentang tipe ${type}.`, "_blank");
+                } else {
+                    window.open(`https://wa.me/+6281231186234?text=Halo selamat ${pesan},saya mau tanya-tanya rumah di The Oso.`, "_blank");
+                }
+            }
+
+            let images = [];
+
+            for (let i = 1; i <= 11; i++) {
+                images.push(`img/galery/gallery (${i}).jpeg`);
+            }
+
+            for (let index = 0; index < images.length; index++) {
+                $(".data").append(`
+                    <div class="item">
+                        <img class="img-fluid rounded bg-light p-1" style="height=80px" onclick="imageModal(${index})" src="${images[index]}" alt="Property ${index + 1}" />
+                    </div>
+                `);
+            }
+
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                lazyLoad: true,
+                autoplay: true,
+                smartSpeed: 1000,
+                rows: 2,
+                navText: ['<i class="bi bi-arrow-left"></i>', '<i class="bi bi-arrow-right"></i>'],
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 2,
+                    },
+                    1000: {
+                        items: 3,
+                    },
+                },
+            });
+
+            function imageModal(id) {
+                $(".image-gallery").html(`<img class="img-fluid rounded bg-light p-1" style="height=100px" src="${images[id]}" alt="Property ${id + 1}" />`);
+                $("#next").data("id", id + 1);
+                $("#prev").data("id", id - 1);
+
+                if (id + 2 > images.length) {
+                    $("#next").hide();
+                } else {
+                    $("#next").show();
+                }
+                if (id - 1 < 0) {
+                    $("#prev").hide();
+                } else {
+                    $("#prev").show();
+                }
+                $("#modal-img").modal("show");
+            }
+            function next() {
+                var id = $("#next").data("id");
+                $(".image-gallery").html(``);
+                $(".image-gallery").append(`<img class="img-fluid rounded bg-light p-1" style="height=100px" src="${images[id]}" alt="Property ${id + 1}" />`);
+                $("#next").data("id", id + 1);
+                $("#prev").data("id", id - 1);
+                $("#prev").show();
+                if (id + 2 > images.length) {
+                    $("#next").hide();
+                } else {
+                    $("#next").show();
+                }
+            }
+            function prev() {
+                var id = $("#prev").data("id");
+                $(".image-gallery").html(``);
+                $(".image-gallery").append(`<img class="img-fluid rounded bg-light p-1" style="height=100px" src="${images[id]}" alt="Property ${id + 1}" />`);
+                $("#prev").data("id", id - 1);
+                $("#next").data("id", id + 1);
+                $("#next").show();
+                if (id - 1 < 0) {
+                    $("#prev").hide();
+                } else {
+                    $("#prev").show();
+                }
+            }
+
+            $(".trigger-modal").click(function () {
+                var img = $(this).data("img");
+                var type = $(this).data("type");
+                var spek = spesifikasi($(this).data("cluster"), $(this).data("type"));
+                $("#spesifikasi").html(spek);
+                $(".main-image").html('<img src="' + img + '" class="img-fluid" />');
+                $("#tipe").html(type);
+                $("#table").html("");
+                $("#table").append(price(type));
+
+                $("#modal-detail").modal("show");
+            });
+        </script>
+    </body>
+</html>
