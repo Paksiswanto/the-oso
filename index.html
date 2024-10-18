@@ -4,14 +4,14 @@
         <meta charset="utf-8" />
         <title>The OSO</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="" name="keywords" />
-        <meta content="" name="description" />
+        <meta content="The OSO, real estate, property listings, perumahan the oso, perumahan surabaya, rumah di jual, perumahan sidoarjo" name="keywords" />
+        <meta content="The OSO adalah platform real estate yang menawarkan pilihan properti premium dan hunian modern di Indonesia, mulai dari rumah mewah hingga hunian terjangkau. Dengan layanan lengkap dan informasi detail, The OSO memudahkan pengguna menemukan serta membeli properti impian mereka" name="description" />
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-        <link rel="manifest" href="img/favicon/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="img/favicon/site.webmanifest" />
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,9 +68,7 @@
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        
-                    </div>
+                    <div class="collapse navbar-collapse" id="navbarCollapse"></div>
                 </nav>
             </div>
             <!-- Navbar End -->
@@ -534,23 +532,23 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-12 site-plan">
                                 <a class="trigger-cek" data-cluster="The Kaes" data-img="img/site-plan/the-kaes.png">
-                                    <img class="img-fluid "  src="img/site-plan/the-kaes.png" alt="" />
+                                    <img class="img-fluid" src="img/site-plan/the-kaes.png" alt="" />
                                 </a>
                             </div>
                             <div class="col-lg-4 col-md-6 col-12 site-plan">
                                 <a class="trigger-cek" data-cluster="The Wise" data-img="img/site-plan/the-wise.png">
-                                    <img class="img-fluid "  src="img/site-plan/the-wise.png" alt="" />
+                                    <img class="img-fluid" src="img/site-plan/the-wise.png" alt="" />
                                 </a>
                             </div>
                             <div class="col-lg-4 col-md-6 col-12 site-plan">
-                                <a class="trigger-cek" data-cluster="The Trust" data-img="img/site-plan/the-trust.png" >
-                                    <img class="img-fluid "  src="img/site-plan/the-trust.png" alt="" />
+                                <a class="trigger-cek" data-cluster="The Trust" data-img="img/site-plan/the-trust.png">
+                                    <img class="img-fluid" src="img/site-plan/the-trust.png" alt="" />
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="text-center wow fadeInUp mt-5" data-wow-delay="0.1s">
-                        <h6 class="section-title text-center">Info lengkap -> <a href="site-plan.pdf" download="site-plan.pdf"  class="btn btn-primary" target="_blank">Download</a></h6>
+                        <h6 class="section-title text-center">Info lengkap -> <a href="site-plan.pdf" download="site-plan.pdf" class="btn btn-primary" target="_blank">Download</a></h6>
                     </div>
                 </div>
             </div>
@@ -856,7 +854,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="modal fade modal-site-plan" id="modal-detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -866,7 +864,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="container">
-                            <img src="" id="img-site-plan" class="img-fluid" alt="">
+                            <img src="" id="img-site-plan" class="img-fluid" alt="" />
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -874,8 +872,6 @@
                     </div>
                 </div>
             </div>
-
-            
         </div>
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -1007,12 +1003,11 @@
                 $("#modal-detail").modal("show");
             });
 
-
-            $('.trigger-cek').click( function () {                
-                $('#site-plan').html($(this).data('cluster'));
-                $('#img-site-plan').attr('src', $(this).data('img'));
-                $('.modal-site-plan').modal('show');
-            })
+            $(".trigger-cek").click(function () {
+                $("#site-plan").html($(this).data("cluster"));
+                $("#img-site-plan").attr("src", $(this).data("img"));
+                $(".modal-site-plan").modal("show");
+            });
         </script>
     </body>
 </html>
