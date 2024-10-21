@@ -89,7 +89,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="index.html" class="nav-item nav-link">Home</a>
                             <a href="#fasilitas" class="nav-item nav-link">Fasilitas</a>
                             <a href="#about" class="nav-item nav-link">Tentang Kami</a>
                             <a href="#products" class="nav-item nav-link">Produk</a>
@@ -289,7 +289,10 @@
                             </div>
                             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                                 <h1 class="mb-4">Tempat #1 Untuk Menemukan Properti Sempurna</h1>
-                                <p class="mb-4">The Oso adalah project perdana yang menawarkan hunian ekonomis dengan kualitas terbaik. Setelah sukses dengan penjualan di cluster pertama, The Trust, dan cluster kedua, The Kaes, kini telah dibuka cluster ketiga, The Wise, serta persiapan untuk membuka cluster keempat segera dilakukan</p>
+                                <p class="mb-4">
+                                    The Oso adalah project perdana yang menawarkan hunian ekonomis dengan kualitas terbaik. Setelah sukses dengan penjualan di cluster pertama, The Trust, dan cluster kedua, The Kaes, kini telah dibuka
+                                    cluster ketiga, The Wise, serta persiapan untuk membuka cluster keempat segera dilakukan
+                                </p>
                                 <p data-bs-toggle="tooltip" data-bs-placement="top" title="Siap Huni"><i class="fa fa-check text-primary me-3"></i>The OSO Waru Sidoarjo</p>
                                 <p data-bs-toggle="tooltip" data-bs-placement="top" title="Pembangunan"><i class="fa fa-clock text-primary me-3"></i>The OSO Gresik</p>
                             </div>
@@ -922,6 +925,28 @@
         <script src="js/main.js"></script>
         <script src="js/type.js"></script>
         <script>
+            const navLinks = document.querySelectorAll(".nav-item.nav-link");
+
+            const sections = document.querySelectorAll("section");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${current}`) {
+                        link.classList.add("active");
+                    }
+                });
+            });
             function wa(type = null) {
                 const now = new Date();
 
