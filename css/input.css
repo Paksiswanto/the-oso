@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../img/produk/the wise/the wise (3).jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

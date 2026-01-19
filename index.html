@@ -1,16 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Green Residence - Hunian Modern</title>
+        <link href="css/style.css" rel="stylesheet" />
 
-        <script src="https://cdn.tailwindcss.com"></script>
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
+        <link rel="stylesheet" href="css/fontawesome.css" />
+        <link rel="stylesheet" href="css/aos.css" />
         <style>
             html {
                 scroll-behavior: smooth;
@@ -58,7 +55,7 @@
                 -ms-overflow-style: none;
                 scrollbar-width: none;
             }
-            
+
             .swiper {
                 width: 100%;
                 padding-top: 50px;
@@ -77,9 +74,11 @@
                 height: 100%;
                 object-fit: cover;
             }
-            
+
             .gallery-img {
-                transition: transform 0.3s ease, filter 0.3s ease;
+                transition:
+                    transform 0.3s ease,
+                    filter 0.3s ease;
                 cursor: pointer;
             }
             .gallery-img:hover {
@@ -351,43 +350,19 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
                     <div class="grid gap-4">
                         <div>
-                            <img
-                                class="gallery-img h-auto max-w-full rounded-lg shadow-lg"
-                                onclick="openLightbox(this)"
-                                loading="lazy"
-                                src="img/galery/gallery (1).jpeg"
-                                alt="Interior Ruang Tamu"
-                            />
+                            <img class="gallery-img h-auto max-w-full rounded-lg shadow-lg" onclick="openLightbox(this)" loading="lazy" src="img/galery/gallery (1).jpeg" alt="Interior Ruang Tamu" />
                         </div>
                         <div>
-                            <img
-                                class="gallery-img h-auto max-w-full rounded-lg shadow-lg"
-                                onclick="openLightbox(this)"
-                                loading="lazy"
-                                src="img/galery/gallery (2).jpeg"
-                                alt="Detail Dekorasi"
-                            />
+                            <img class="gallery-img h-auto max-w-full rounded-lg shadow-lg" onclick="openLightbox(this)" loading="lazy" src="img/galery/gallery (2).jpeg" alt="Detail Dekorasi" />
                         </div>
                         <div>
-                            <img
-                                class="gallery-img h-auto max-w-full rounded-lg shadow-lg"
-                                onclick="openLightbox(this)"
-                                loading="lazy"
-                                src="img/galery/gallery (3).jpeg"
-                                alt="Ruang Keluarga"
-                            />
+                            <img class="gallery-img h-auto max-w-full rounded-lg shadow-lg" onclick="openLightbox(this)" loading="lazy" src="img/galery/gallery (3).jpeg" alt="Ruang Keluarga" />
                         </div>
                     </div>
 
                     <div class="grid gap-4">
                         <div>
-                            <img
-                                class="gallery-img h-auto max-w-full rounded-lg shadow-lg"
-                                onclick="openLightbox(this)"
-                                loading="lazy"
-                                src="img/galery/gallery (4).jpeg"
-                                alt="Tampak Depan Rumah"
-                            />
+                            <img class="gallery-img h-auto max-w-full rounded-lg shadow-lg" onclick="openLightbox(this)" loading="lazy" src="img/galery/gallery (4).jpeg" alt="Tampak Depan Rumah" />
                         </div>
                         <div>
                             <img
@@ -492,12 +467,13 @@
                 </div>
                 <div class="md:w-1/2 h-80 bg-gray-200 rounded-xl overflow-hidden shadow-lg" data-aos="fade-left">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5!2d112.7!3d-7.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMTInMDAuMCJTIDExMsKwNDInMDAuMCJF!5e0!3m2!1sen!2sid!4v1600000000000!5m2!1sen!2sid"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1217.2391546280742!2d112.8117328655423!3d-7.354644288024523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7ef003ac064e5%3A0xc69ba123228491df!2sPerumahan%20The%20Oso!5e1!3m2!1sid!2sid!4v1768813649031!5m2!1sid!2sid"
                         width="100%"
                         height="100%"
                         style="border: 0"
                         allowfullscreen=""
                         loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>
             </div>
@@ -532,8 +508,7 @@
             <i class="fab fa-whatsapp text-4xl"></i>
         </a>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+        <script src="js/aos.js"></script>
         <script>
             AOS.init({
                 once: true,
