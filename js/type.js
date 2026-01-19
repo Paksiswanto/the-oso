@@ -197,7 +197,7 @@ function price(type) {
                                                     <tbody>
                                                         <tr>
                                                             <th>Harga Jual</th>
-                                                            <td> 650.000.000</td>
+                                                            <td> 695.000.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>DP</th>
@@ -228,58 +228,27 @@ function price(type) {
        </ul>
                                                 
                                                 </div>
-        <div class="tab-content">
-            <div class="tab-pane fade show active" id="tab-kpr-1">
              <table class="table table-bordered">
                                                     <tbody>
                                                         <tr>
-                                                            <th>KPR (Mandiri 3,95%)</th>
-                                                            <td> 645.000.000</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>20 Tahun</th>
-                                                            <td>3.891.600</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>15 Tahun</th>
-                                                            <td>4.754.842</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>10 Tahun</th>
-                                                            <td>6.514.995</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-            </div>
-            <div class="tab-pane fade" id="tab-kpr-2">
-             <table class="table table-bordered">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>KPR (BTN 5,25%)</th>
-                                                            <td> 645.000.000</td>
+                                                            <th>KPR (BTN (3,5%) Fx 3Thn)</th>
+                                                            <td> 690.000.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>25 Tahun</th>
-                                                            <td>3.909.900</td>
+                                                            <td>3.488.800</td>
                                                         </tr>
                                                         <tr>
-                                                            <th>10 Tahun</th>
-                                                            <td>4.405.000</td>
+                                                            <th>20 Tahun</th>
+                                                            <td>4.045.800</td>
                                                         </tr>
                                                         <tr>
                                                             <th>15 Tahun</th>
-                                                            <td>5.266.300</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>10 Tahun</th>
-                                                            <td>7.045.700</td>
+                                                            <td>4.992.500</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
-            </div>
-            
-            </div>
-                    </div>
+           
     `;
     } else if (type == "38") {
         price = `
@@ -295,7 +264,7 @@ function price(type) {
                                                     <tbody>
                                                         <tr>
                                                             <th>Harga Jual</th>
-                                                            <td> 770.000.000</td>
+                                                            <td> 795.000.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>DP</th>
@@ -315,19 +284,19 @@ function price(type) {
                                                         </tr>
                                                         <tr>
                                                             <th>KPR (fixed 3,95%)</th>
-                                                            <td>765.000.000</td>
+                                                            <td>790.000.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>25 Tahun</th>
-                                                            <td>4.016.862</td>
+                                                            <td>3.994.400</td>
                                                         </tr>
                                                         <tr>
                                                             <th>20 Tahun</th>
-                                                            <td>4.615.619</td>
+                                                            <td>4.632.200</td>
                                                         </tr>
                                                         <tr>
                                                             <th>15 Tahun</th>
-                                                            <td>5.639.464</td>
+                                                            <td>5.716.000</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -421,19 +390,19 @@ function price(type) {
                                                         </tr>
                                                          <tr>
                                                             <th>KPR (fixed 3,95%)</th>
-                                                            <td>810.00.000</td>
+                                                            <td>845.000.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>25 Tahun</th>
-                                                            <td>4.258.148</td>
+                                                            <td>4.272.500</td>
                                                         </tr>
                                                         <tr>
                                                             <th>20 Tahun</th>
-                                                            <td>4.887.126</td>
+                                                            <td>4.954.600</td>
                                                         </tr>
                                                         <tr>
                                                             <th>15 Tahun</th>
-                                                            <td>5.971.197</td>
+                                                            <td>6.114.000</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -454,7 +423,7 @@ function price(type) {
                                                     <tbody>
                                                         <tr>
                                                             <th>Harga Jual</th>
-                                                            <td> 825.000.000</td>
+                                                            <td> 865.000.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>DP</th>
@@ -474,19 +443,19 @@ function price(type) {
                                                         </tr>
                                                          <tr>
                                                             <th>KPR (fixed 3,95%)</th>
-                                                            <td>820.00.000</td>
+                                                            <td>860.000.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>25 Tahun</th>
-                                                            <td>4.305.656</td>
+                                                            <td>4.348.400</td>
                                                         </tr>
                                                         <tr>
                                                             <th>20 Tahun</th>
-                                                            <td>4.947.416</td>
+                                                            <td>5.042.600</td>
                                                         </tr>
                                                         <tr>
                                                             <th>15 Tahun</th>
-                                                            <td>6.044.915</td>
+                                                            <td>6.222.500</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -507,11 +476,11 @@ function price(type) {
                                                     <tbody>
                                                         <tr>
                                                             <th>Harga Jual</th>
-                                                            <td> 785.000.000</td>
+                                                            <td> 810.000.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>DP</th>
-                                                            <td>5.000.000</td>
+                                                            <td>35.500.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>UTJ</th>
@@ -519,7 +488,7 @@ function price(type) {
                                                         </tr>
                                                         <tr>
                                                             <th>Cashback</th>
-                                                            <td>30.000.000</td>
+                                                            <td>75.000.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>Sisa DP</th>
@@ -527,19 +496,19 @@ function price(type) {
                                                         </tr>
                                                          <tr>
                                                             <th>KPR (fixed 3,95%)</th>
-                                                            <td>780.00.000</td>
+                                                            <td>769.500.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>25 Tahun</th>
-                                                            <td>4.095.624</td>
+                                                            <td>3.852.200</td>
                                                         </tr>
                                                         <tr>
                                                             <th>20 Tahun</th>
-                                                            <td>4.706.122</td>
+                                                            <td>4.463.000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>15 Tahun</th>
-                                                            <td>5.750.042</td>
+                                                            <td>5.501.000</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
