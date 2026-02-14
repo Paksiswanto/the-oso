@@ -36,7 +36,7 @@
 
                 /* RESPONSIVE SETTINGS */
                 width: 100%; /* Di HP mengambil lebar penuh container */
-                max-width: 300px; /* Di Desktop dibatasi maksimal 300px */
+                max-width: 355px; /* Di Desktop dibatasi maksimal 300px */
                 height: 380px; /* Tinggi fix agar seragam */
 
                 background: var(--card-bg);
@@ -103,7 +103,7 @@
 
             .card__image {
                 width: 100%;
-                height: 160px; /* Tinggi gambar */
+                height: 200px; /* Tinggi gambar */
                 background-color: #e2e8f0;
                 border-radius: 12px;
                 transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -221,6 +221,54 @@
             }
             .card:hover .card__button svg {
                 animation: pulse 1.5s infinite;
+            }
+            .kpr-modal {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+            }
+
+            .kpr-box {
+                background: white;
+                padding: 25px;
+                border-radius: 12px;
+                width: 320px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            }
+
+            .kpr-box h2 {
+                margin-bottom: 15px;
+            }
+
+            .kpr-box input {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border-radius: 6px;
+                border: 1px solid #ddd;
+            }
+
+            .kpr-box button {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                background: #1e40af;
+                color: white;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+            .close-btn {
+                background: #999;
+                margin-top: 10px;
+            }
+
+            .hidden {
+                display: none;
             }
 
             @keyframes shine {
@@ -416,7 +464,7 @@
                             <div class="card__glow"></div>
                             <div class="card__content">
                                 <div class="card__badge" style="background: #16a34a">SIAP HUNI</div>
-                                <div class="card__image" style="background-image: url(&quot;https://images.unsplash.com/photo-1580587771525-78b9dba3b91d?auto=format&fit=crop&w=600&q=80&quot;)"></div>
+                                <div class="card__image"><img src="img/produk/the wise/the wise (1).jpeg" alt="" srcset="" /></div>
                                 <div class="card__text">
                                     <p class="card__title">The Wise (Ready)</p>
                                     <p class="card__description">Tipe 36/72 Standart. Pilihan tepat langsung huni.</p>
@@ -436,7 +484,7 @@
                             <div class="card__glow"></div>
                             <div class="card__content">
                                 <div class="card__badge" style="background: #ca8a04">INDENT 2026</div>
-                                <div class="card__image" style="background-image: url(&quot;https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=600&q=80&quot;)"></div>
+                                <div class="card__image"><img src="img/produk/the wise/the wise.jpeg" alt="" srcset="" /></div>
                                 <div class="card__text">
                                     <p class="card__title">The Wise (Type B)</p>
                                     <p class="card__description">Tipe 36/78 (Tanah Panjang). Harga promo indent.</p>
@@ -460,7 +508,7 @@
                             <div class="card__glow"></div>
                             <div class="card__content">
                                 <div class="card__badge" style="background: #9333ea">3 KAMAR</div>
-                                <div class="card__image" style="background-image: url(&quot;https://images.unsplash.com/photo-1600596542815-e328701102b9?auto=format&fit=crop&w=600&q=80&quot;)"></div>
+                                <div class="card__image"><img src="img/produk/the kaes/the kaes (2).jpeg" alt="" srcset="" /></div>
                                 <div class="card__text">
                                     <p class="card__title">Cluster The Kaes</p>
                                     <p class="card__description">Tipe 53/72. Rumah tumbuh dengan 3 kamar tidur.</p>
@@ -484,7 +532,7 @@
                             <div class="card__glow"></div>
                             <div class="card__content">
                                 <div class="card__badge" style="background: #1e40af">PREMIUM</div>
-                                <div class="card__image" style="background-image: url(&quot;https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80&quot;)"></div>
+                                <div class="card__image"><img src="img/produk/the trust/the trust (1).jpeg" alt="" srcset="" /></div>
                                 <div class="card__text">
                                     <p class="card__title">Cluster The Trust</p>
                                     <p class="card__description">Tipe 50/91. Tanah luas 91m², lebar depan 7 meter.</p>
@@ -492,7 +540,7 @@
                                 </div>
                                 <div class="card__footer">
                                     <div class="card__price">Rp 815 Jt</div>
-                                    <button class="card__button">
+                                    <button class="card__button open-kpr">
                                         <svg height="16" width="16" viewBox="0 0 24 24"><path stroke-width="2" stroke="currentColor" d="M4 12H20M12 4V20" fill="currentColor"></path></svg>
                                     </button>
                                 </div>
@@ -502,6 +550,34 @@
                 </div>
             </div>
         </section>
+        <!-- MODAL SIMULASI KPR -->
+        <div id="kprModal" class="kpr-modal hidden">
+            <div class="kpr-box">
+                <h2>Simulasi KPR - Cluster The Trust</h2>
+
+                <label>Harga Rumah</label>
+                <input type="text" id="harga" value="815000000" readonly />
+
+                <label>DP (%)</label>
+                <input type="number" id="dp" value="10" />
+
+                <label>Bunga (%) / Tahun</label>
+                <input type="number" id="bunga" value="10" />
+
+                <label>Tenor (Tahun)</label>
+                <input type="number" id="tenor" value="15" />
+
+                <button onclick="hitungKPR()">Hitung Cicilan</button>
+
+                <div class="hasil">
+                    <p>DP: <span id="hasilDP">-</span></p>
+                    <p>Pinjaman: <span id="hasilPinjaman">-</span></p>
+                    <p>Cicilan / Bulan: <span id="hasilCicilan">-</span></p>
+                </div>
+
+                <button class="close-btn" onclick="closeKPR()">Tutup</button>
+            </div>
+        </div>
 
         <section id="keunggulan" class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center">
@@ -801,6 +877,26 @@
                 once: true,
                 offset: 100,
             });
+            const modal = document.getElementById("kprModal");
+            const openBtn = document.querySelector(".open-kpr");
+            const closeBtn = document.getElementById("closeKPR");
+
+            // buka modal
+            openBtn.addEventListener("click", () => {
+                modal.classList.remove("hidden");
+            });
+
+            // tutup modal (tombol)
+            closeBtn.addEventListener("click", () => {
+                modal.classList.add("hidden");
+            });
+
+            // tutup modal saat klik area luar (overlay)
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    modal.classList.add("hidden");
+                }
+            });
 
             function switchTab(tabId) {
                 document.querySelectorAll(".tab-content").forEach((el) => {
@@ -810,8 +906,23 @@
                 document.getElementById(tabId).classList.remove("hidden");
                 document.getElementById(tabId).classList.add("block");
 
-                // Reset button styles (optional logic for visualization)
-                document.querySelectorAll(".tab-btn").forEach((btn) => btn.classList.remove("border-blue-600", "text-blue-600", "border-purple-600", "text-purple-600", "border-blue-800", "text-blue-800"));
+                // Reset button styles
+                document.querySelectorAll(".tab-btn").forEach((btn) => {
+                    btn.classList.remove("active", "border-blue-600", "text-blue-600", "border-purple-600", "text-purple-600", "border-blue-800", "text-blue-800");
+                });
+
+                const activeBtn = document.querySelector(`button[onclick*="switchTab('${tabId}')"]`);
+                if (activeBtn) {
+                    activeBtn.classList.add("active");
+
+                    if (tabId === "wise") {
+                        activeBtn.classList.add("border-blue-600", "text-blue-600");
+                    } else if (tabId === "kaes") {
+                        activeBtn.classList.add("border-purple-600", "text-purple-600");
+                    } else if (tabId === "trust") {
+                        activeBtn.classList.add("border-blue-800", "text-blue-800");
+                    }
+                }
             }
             const lightbox = document.getElementById("lightbox");
             const lightboxImg = document.getElementById("lightbox-img");
@@ -886,6 +997,33 @@
                     1024: { slidesPerView: 4 },
                 },
             });
+            // buka modal saat tombol PLUS diklik
+            document.querySelector(".card__button").addEventListener("click", () => {
+                document.getElementById("kprModal").classList.remove("hidden");
+            });
+
+            function closeKPR() {
+                document.getElementById("kprModal").classList.add("hidden");
+            }
+
+            function hitungKPR() {
+                const harga = parseFloat(document.getElementById("harga").value);
+                const dpPersen = parseFloat(document.getElementById("dp").value);
+                const bungaTahunan = parseFloat(document.getElementById("bunga").value);
+                const tenorTahun = parseFloat(document.getElementById("tenor").value);
+
+                const dp = harga * (dpPersen / 100);
+                const pinjaman = harga - dp;
+
+                const bungaBulanan = bungaTahunan / 100 / 12;
+                const jumlahBulan = tenorTahun * 12;
+
+                const cicilan = (pinjaman * (bungaBulanan * Math.pow(1 + bungaBulanan, jumlahBulan))) / (Math.pow(1 + bungaBulanan, jumlahBulan) - 1);
+
+                document.getElementById("hasilDP").innerText = "Rp " + dp.toLocaleString("id-ID");
+                document.getElementById("hasilPinjaman").innerText = "Rp " + pinjaman.toLocaleString("id-ID");
+                document.getElementById("hasilCicilan").innerText = "Rp " + Math.round(cicilan).toLocaleString("id-ID") + " / bulan";
+            }
         </script>
     </body>
 </html>
