@@ -22,18 +22,18 @@
 
         <link rel="canonical" href="https://domainkamu.com/" />
 
-        <!-- Open Graph (biar cakep kalau dishare) -->
         <meta property="og:title" content="The OSO - Hunian Modern Smart & Green Living" />
-        <meta property="og:description" content="Hunian modern dengan konsep Smart & Green Living, lokasi strategis, fasilitas lengkap, dan lingkungan asri untuk keluarga maupun investasi." />
+        <meta property="og:description" content="Hunian modern dengan konsep Smart & Green Living, lokasi strategis, fasilitas lengkap, dan lingkungan asri untuk keluarga maupun investasi" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://domainkamu.com/" />
         <meta property="og:image" content="https://domainkamu.com/img/preview.jpg" />
         <meta name="author" content="The Oso Developer" />
         <link href="css/style.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
         <link rel="stylesheet" href="css/fontawesome.css" />
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+        <script src="js/swiper-bundle.min.js"></script>
+
         <link rel="stylesheet" href="css/aos.css" />
         <style>
             html {
@@ -291,6 +291,15 @@
             .hidden {
                 display: none;
             }
+            .swiper-pagination-bullet {
+                background: #999;
+                opacity: 0.4;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: #22c55e;
+                opacity: 1;
+            }
 
             @keyframes shine {
                 0% {
@@ -387,7 +396,6 @@
                 backdrop-filter: blur(5px);
             }
         </style>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body class="font-sans text-gray-800 bg-gray-50 overflow-x-hidden">
         <nav class="bg-white/95 backdrop-blur-sm shadow-md fixed w-full z-50 transition-all duration-300">
@@ -396,7 +404,7 @@
                     <img src="img/logo.png" alt="Logo The Oso" class="w-12 h-12 object-contain" style="height: 50px; width: auto" />
                     <span>The Oso</span>
                 </a>
-                <div class="hidden md:flex space-x-8 font-medium">
+                <div class="md:flex space-x-8 font-medium">
                     <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
                     <a href="#keunggulan" class="hover:text-blue-600 transition">Keunggulan</a>
                     <a href="#tipe" class="hover:text-blue-600 transition">Produk</a>
@@ -571,34 +579,6 @@
                 </div>
             </div>
         </section>
-        <!-- MODAL SIMULASI KPR -->
-        <div id="kprModal" class="kpr-modal hidden">
-            <div class="kpr-box">
-                <h2>Simulasi KPR - Cluster The Trust</h2>
-
-                <label>Harga Rumah</label>
-                <input type="text" id="harga" value="815000000" readonly />
-
-                <label>DP (%)</label>
-                <input type="number" id="dp" value="10" />
-
-                <label>Bunga (%) / Tahun</label>
-                <input type="number" id="bunga" value="10" />
-
-                <label>Tenor (Tahun)</label>
-                <input type="number" id="tenor" value="15" />
-
-                <button onclick="hitungKPR()">Hitung Cicilan</button>
-
-                <div class="hasil">
-                    <p>DP: <span id="hasilDP">-</span></p>
-                    <p>Pinjaman: <span id="hasilPinjaman">-</span></p>
-                    <p>Cicilan / Bulan: <span id="hasilCicilan">-</span></p>
-                </div>
-
-                <button class="close-btn" onclick="closeKPR()">Tutup</button>
-            </div>
-        </div>
 
         <section id="keunggulan" class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center">
@@ -787,7 +767,13 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="relative group">
-                                    <img class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg cursor-pointer" onclick="openLightbox(this)" src="img/galeri/the-oso-thekaes.jpeg" alt="Tipe The Kaes" loading="lazy" />
+                                    <img class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg cursor-pointer" onclick="openLightbox(this)" src="img/galeri/the-kaes.jpeg" alt="Tipe The Kaes" loading="lazy" />
+                                    <div class="absolute bottom-0 left-0 bg-black/60 w-full p-2 text-center rounded-b-xl">Tipe The Kaes</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg cursor-pointer" onclick="openLightbox(this)" src="img/galeri/the-oso-gerbang-the kaes.jpeg" alt="Tipe The Kaes" loading="lazy" />
                                     <div class="absolute bottom-0 left-0 bg-black/60 w-full p-2 text-center rounded-b-xl">Tipe The Kaes</div>
                                 </div>
                             </div>
@@ -822,7 +808,7 @@
             </div>
         </section>
 
-        <div id="lightbox" class="fixed inset-0 z-[100] bg-black bg-opacity-90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
+        <div id="lightbox" class="fixed inset-0 z-[100] bg-black bg-opacity-90 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
             <div class="relative max-w-5xl max-h-screen">
                 <button class="absolute -top-10 right-0 text-white text-4xl hover:text-gray-300">×</button>
                 <img id="lightbox-img" src="" class="max-h-[85vh] max-w-full rounded-lg shadow-2xl border-2 border-white object-contain" />
@@ -862,6 +848,34 @@
                 </div>
             </div>
         </section>
+        <div id="kprModal" class="kpr-modal hidden">
+            <div class="kpr-box">
+                <h2>Simulasi KPR - Cluster The Trust</h2>
+
+                <label>Harga Rumah</label>
+                <input type="text" id="harga" value="815000000" readonly />
+
+                <label>DP (%)</label>
+                <input type="number" id="dp" value="10" />
+
+                <label>Bunga (%) / Tahun</label>
+                <input type="number" id="bunga" value="10" />
+
+                <label>Tenor (Tahun)</label>
+                <input type="number" id="tenor" value="15" />
+
+                <button onclick="hitungKPR()">Hitung Cicilan</button>
+
+                <div class="hasil">
+                    <p>DP: <span id="hasilDP">-</span></p>
+                    <p>Pinjaman: <span id="hasilPinjaman">-</span></p>
+                    <p>Cicilan / Bulan: <span id="hasilCicilan">-</span></p>
+                </div>
+                <div class="flex">
+                    <button class="close-btn col-span-4 mx-1" onclick="closeKPR()">Tutup</button>
+                </div>
+            </div>
+        </div>
 
         <footer id="kontak" class="bg-gray-800 text-gray-300 py-12 border-t border-gray-700">
             <div class="container mx-auto px-6 text-center">
@@ -891,32 +905,15 @@
         >
             <i class="fab fa-whatsapp text-4xl"></i>
         </a>
+        <!-- MODAL SIMULASI KPR -->
 
         <script src="js/aos.js"></script>
         <script>
+            const cek = document.querySelector(".swiper-pagination-bullet");
+            console.log(cek);
             AOS.init({
                 once: true,
                 offset: 100,
-            });
-            const modal = document.getElementById("kprModal");
-            const openBtn = document.querySelector(".open-kpr");
-            const closeBtn = document.getElementById("closeKPR");
-
-            // buka modal
-            openBtn.addEventListener("click", () => {
-                modal.classList.remove("hidden");
-            });
-
-            // tutup modal (tombol)
-            closeBtn.addEventListener("click", () => {
-                modal.classList.add("hidden");
-            });
-
-            // tutup modal saat klik area luar (overlay)
-            modal.addEventListener("click", (e) => {
-                if (e.target === modal) {
-                    modal.classList.add("hidden");
-                }
             });
 
             function switchTab(tabId) {
@@ -965,27 +962,39 @@
                     lightbox.classList.add("hidden");
                 }, 300);
             }
-            // Settingan Slider Lingkungan
+
             const swiperCommonSettings = {
-                slidesPerView: 1,
+                slidesPerView: 1.2,
                 spaceBetween: 20,
                 loop: true,
-                // PENTING UNTUK MENGHILANGKAN LAG:
-                observer: true,
-                observeParents: true,
-                // MENGAKTIFKAN LAZY LOAD SWIPER:
+
+                centeredSlides: true,
+                grabCursor: true,
+                speed: 800,
+
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
                 },
+
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+
+                breakpoints: {
+                    640: { slidesPerView: 2.2 },
+                    1024: { slidesPerView: 3.2 },
+                },
             };
 
             // Slider 1
-            var swiper1 = new Swiper(".mySwiper-lingkungan", {
-                ...swiperCommonSettings, // Pakai settingan umum di atas
+            const swiper1 = new Swiper(".mySwiper-lingkungan", {
+                ...swiperCommonSettings,
                 autoplay: {
                     delay: 2500,
                     disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
                 },
                 breakpoints: {
                     640: { slidesPerView: 2 },
@@ -994,11 +1003,12 @@
             });
 
             // Slider 2
-            var swiper2 = new Swiper(".mySwiper-fasilitas", {
+            const swiper2 = new Swiper(".mySwiper-fasilitas", {
                 ...swiperCommonSettings,
                 autoplay: {
                     delay: 3000,
                     disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
                 },
                 breakpoints: {
                     640: { slidesPerView: 2 },
@@ -1007,18 +1017,19 @@
             });
 
             // Slider 3
-            var swiper3 = new Swiper(".mySwiper-unit", {
+            const swiper3 = new Swiper(".mySwiper-unit", {
                 ...swiperCommonSettings,
                 autoplay: {
                     delay: 3500,
                     disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
                 },
                 breakpoints: {
                     640: { slidesPerView: 2 },
                     1024: { slidesPerView: 4 },
                 },
             });
-            // buka modal saat tombol PLUS diklik
+
             document.querySelector(".card__button").addEventListener("click", () => {
                 document.getElementById("kprModal").classList.remove("hidden");
             });
@@ -1045,6 +1056,26 @@
                 document.getElementById("hasilPinjaman").innerText = "Rp " + pinjaman.toLocaleString("id-ID");
                 document.getElementById("hasilCicilan").innerText = "Rp " + Math.round(cicilan).toLocaleString("id-ID") + " / bulan";
             }
+            const modal = document.getElementById("kprModal");
+            const openBtn = document.querySelector(".open-kpr");
+            const closeBtn = document.getElementById("closeKPR");
+
+            // buka modal
+            openBtn.addEventListener("click", () => {
+                modal.classList.remove("hidden");
+            });
+
+            // tutup modal (tombol)
+            closeBtn.addEventListener("click", () => {
+                modal.classList.add("hidden");
+            });
+
+            // tutup modal saat klik area luar (overlay)
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    modal.classList.add("hidden");
+                }
+            });
         </script>
     </body>
 </html>

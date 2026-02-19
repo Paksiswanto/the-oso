@@ -17,6 +17,7 @@
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "swiper": "^12.1.1"
   }
 }
