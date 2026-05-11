@@ -1828,6 +1828,53 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
+
+            <div data-aos="fade-up">
+                <div class="flex items-center gap-2 mb-6 border-l-4 border-yellow-500 pl-4">
+                    <h3 class="text-xl font-bold text-yellow-400">Fitur </h3>
+                </div>
+
+                <div class="swiper mySwiper-fitur">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg cursor-pointer"
+                                onclick="openLightbox(this)" src="img/fitur/fitur (1).jpeg" alt="Kolam Renang"
+                                loading="lazy" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg cursor-pointer"
+                                onclick="openLightbox(this)" src="img/fitur/fitur (2).jpeg" alt="Kolam Renang"
+                                loading="lazy" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg cursor-pointer"
+                                onclick="openLightbox(this)" src="img/fitur/fitur (3).jpeg" alt="Kolam Renang"
+                                loading="lazy" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg cursor-pointer"
+                                onclick="openLightbox(this)" src="img/fitur/fitur (4).jpeg" alt="Taman Bermain"
+                                loading="lazy" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg cursor-pointer"
+                                onclick="openLightbox(this)" src="img/fitur/fitur (5).jpeg" alt="Club House"
+                                loading="lazy" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg cursor-pointer"
+                                onclick="openLightbox(this)" src="img/fitur/fitur (6).jpeg" alt="Kolam Renang"
+                                loading="lazy" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg cursor-pointer"
+                                onclick="openLightbox(this)" src="img/fitur/fitur (7).jpeg" alt="Kolam renang"
+                                loading="lazy" />
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2066,6 +2113,19 @@
                 disableOnInteraction: false,
                 pauseOnMouseEnter: false,
             },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 4 },
+            },
+        });
+        const swiper4 = new Swiper(".mySwiper-fitur", {
+            ...swiperCommonSettings,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+            },
+            
             breakpoints: {
                 640: { slidesPerView: 2 },
                 1024: { slidesPerView: 4 },
