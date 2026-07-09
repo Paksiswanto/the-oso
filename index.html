@@ -26,7 +26,7 @@
     <meta property="og:description"
         content="Hunian modern dengan konsep Smart & Green Living, lokasi strategis, fasilitas lengkap, dan lingkungan asri untuk keluarga maupun investasi" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://domainkamu.com/" />
+    <meta property="og:url" content="https://theosogroup.id/" />
     <meta property="og:image" content="https://domainkamu.com/img/preview.jpg" />
     <meta name="author" content="The Oso Developer" />
     <link href="css/style.css" rel="stylesheet" />
@@ -76,13 +76,10 @@
             box-shadow: var(--card-shadow);
             border: 1px solid rgba(0, 0, 0, 0.05);
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-
-            /* Flex container untuk wrapper utama jika diperlukan */
             display: flex;
             flex-direction: column;
         }
 
-        /* Efek Shine & Glow (Absolute) */
         .card__shine {
             position: absolute;
             inset: 0;
@@ -102,16 +99,12 @@
             z-index: 0;
         }
 
-        /* FLEXBOX UNTUK KONTEN (Penting agar footer selalu di bawah) */
         .card__content {
             padding: 1.25em;
             height: 100%;
             display: flex;
-            /* Aktifkan Flexbox */
             flex-direction: column;
-            /* Susun vertikal */
             gap: 0.75em;
-            /* Jarak antar elemen */
             position: relative;
             z-index: 2;
         }
@@ -136,7 +129,6 @@
         .card__image {
             width: 100%;
             height: 200px;
-            /* Tinggi gambar */
             background-color: #e2e8f0;
             border-radius: 12px;
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -145,10 +137,8 @@
             background-size: cover;
             background-position: center;
             flex-shrink: 0;
-            /* Gambar tidak boleh mengecil */
         }
 
-        /* Overlay pada gambar */
         .card__image::after {
             content: "";
             position: absolute;
@@ -157,13 +147,11 @@
             opacity: 0.5;
         }
 
-        /* Area Teks (Flex Grow) */
         .card__text {
             display: flex;
             flex-direction: column;
             gap: 0.25em;
             flex-grow: 1;
-            /* INI KUNCINYA: Mendorong footer ke bawah */
         }
 
         .card__title {
@@ -184,16 +172,11 @@
             line-height: 1.4;
         }
 
-        /* Footer (Harga & Tombol) */
         .card__footer {
             display: flex;
-            /* Flex row */
             justify-content: space-between;
-            /* Kiri kanan mentok */
             align-items: center;
-            /* Tengah secara vertikal */
             margin-top: auto;
-            /* Pastikan footer di paling bawah */
             padding-top: 10px;
             border-top: 1px solid rgba(0, 0, 0, 0.05);
         }
@@ -219,7 +202,6 @@
             border: none;
         }
 
-        /* HOVER EFFECTS */
         .card:hover {
             transform: translateY(-10px);
             box-shadow:
@@ -486,8 +468,8 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2" data-aos="fade-right">
                     <div class="relative">
-                        <img src="img/produk/the kaes/the kaes (2).jpeg" alt="Family"
-                            class="rounded-2xl shadow-2xl w-full object-cover h-100" />
+                        <img src="img/produk/the-fath/the-fath-main.jpeg" style="height: 621px;" alt="Family"
+                            class="rounded-2xl shadow-2xl w-full object-cover" />
                         <div
                             class="absolute -bottom-6 -right-6 bg-blue-900 text-white p-6 rounded-xl shadow-xl hidden md:block">
                             <p class="font-bold text-2xl">10+</p>
@@ -557,16 +539,16 @@
             </div>
 
             <div id="wise" class="tab-content block animate-fade">
-                <div class="cards-wrapper" >
-                    <div class="card card-modal" data-harga = "645000000" style="--card-accent: #2563eb">
+                <div class="cards-wrapper">
+                    <div class="card card-modal" data-harga="645000000" style="--card-accent: #2563eb">
                         <div class="card__shine"></div>
                         <div class="card__glow"></div>
                         <div class="card__content">
-                            <div class="card__badge" style="background: #16a34a">SIAP HUNI</div>
+                            <div class="card__badge" style="background: #a31616">SOLD OUT</div>
                             <div class="card__image"><img src="img/produk/the wise/the wise (1).jpeg" alt=""
                                     srcset="" /></div>
                             <div class="card__text">
-                                <p class="card__title">The Wise (Ready)</p>
+                                <p class="card__title">The Wise</p>
                                 <p class="card__description">Tipe 36/72 Standart. Pilihan tepat langsung huni.</p>
                                 <p class="card__description" style="font-size: 0.8em; margin-top: 5px">2 KT • 1 KM •
                                     1300W</p>
@@ -583,11 +565,11 @@
                         </div>
                     </div>
 
-                    <div class="card card-modal" data-harga = "595000000" style="--card-accent: #ca8a04">
+                    <div class="card card-modal" data-harga="595000000" style="--card-accent: #ca8a04">
                         <div class="card__shine"></div>
                         <div class="card__glow"></div>
                         <div class="card__content">
-                            <div class="card__badge" style="background: #ca8a04">SIAP HUNI</div>
+                            <div class="card__badge" style="background: #ca0404">SOLD OUT</div>
                             <div class="card__image"><img src="img/produk/the wise/the wise.jpeg" alt="" srcset="" />
                             </div>
                             <div class="card__text">
@@ -610,8 +592,8 @@
             </div>
 
             <div id="kaes" class="tab-content hidden animate-fade">
-                <div class="cards-wrapper" >
-                    <div class="card card-modal" data-harga = "820000000" style="--card-accent: #9333ea">
+                <div class="cards-wrapper">
+                    <div class="card card-modal" data-harga="820000000" style="--card-accent: #9333ea">
                         <div class="card__shine"></div>
                         <div class="card__glow"></div>
                         <div class="card__content">
@@ -639,12 +621,12 @@
             </div>
 
             <div id="trust" class="tab-content hidden animate-fade">
-                <div class="cards-wrapper" >
-                    <div class="card card-modal" data-harga = "815000000" style="--card-accent: #1e40af">
+                <div class="cards-wrapper">
+                    <div class="card card-modal" data-harga="815000000" style="--card-accent: #1e40af">
                         <div class="card__shine"></div>
                         <div class="card__glow"></div>
                         <div class="card__content">
-                            <div class="card__badge" style="background: #1e40af">PREMIUM</div>
+                            <div class="card__badge" style="background: #af1e1e">SOLD OUT</div>
                             <div class="card__image"><img src="img/produk/the trust/the trust (1).jpeg" alt=""
                                     srcset="" /></div>
                             <div class="card__text">
@@ -667,12 +649,12 @@
                 </div>
             </div>
             <div id="fath" class="tab-content hidden animate-fade">
-                <div class="cards-wrapper" >
-                    <div class="card card-modal" data-harga = "490000000"  style="--card-accent: #d4930a">
+                <div class="cards-wrapper">
+                    <div class="card card-modal" data-harga="590000000" style="--card-accent: #d4930a">
                         <div class="card__shine"></div>
                         <div class="card__glow"></div>
                         <div class="card__content">
-                            <div class="card__badge" style="background: #d4930a">SEGERA HADIR</div>
+                            <div class="card__badge" style="background: #d4930a">TOP PICK</div>
                             <div class="card__image">
                                 <img src="img/produk/the-fath/the-fath.webp" alt="The Fath"
                                     onerror="this.src = 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80'"
@@ -686,8 +668,8 @@
                                     72m²</p>
                             </div>
                             <div class="card__footer">
-                                <div class="card__price" style="color: #d4930a">Rp 400 Jt an</div>
-                                <button class="card__button open-kpr" data-harga="400000000"
+                                <div class="card__price" style="color: #d4930a">Rp 590 Jt an</div>
+                                <button class="card__button open-kpr" data-harga="590000000"
                                     style="background: #d4930a">
                                     <svg height="16" width="16" viewBox="0 0 24 24">
                                         <path stroke-width="2" stroke="currentColor" d="M4 12H20M12 4V20"
@@ -695,14 +677,10 @@
                                     </svg>
                                 </button>
                             </div>
-                            <a href="https://wa.me/6281231186234?text=Halo,%20saya%20tertarik%20dengan%20Cluster%20The%20Fath%20di%20The%20OSO.%20Boleh%20info%20lebih%20lanjut%3F"
-                                target="_blank" class="card__wa-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                                    <path
-                                        d="M12 0C5.373 0 0 5.373 0 12c0 2.089.537 4.049 1.475 5.757L0 24l6.435-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.374l-.36-.214-3.719.831.878-3.607-.235-.371A9.818 9.818 0 1112 21.818z" />
-                                </svg>
+                            <a class="card__button"
+                                    href="https://wa.me/6281231186234?text=Halo,%20saya%20tertarik%20dengan%20Cluster%20The%20Fath%20di%20The%20OSO.%20Boleh%20info%20lebih%20lanjut%3F"
+                                    target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
                                 Tanya via WhatsApp
                             </a>
                         </div>
@@ -776,7 +754,6 @@
             }
 
             .fath-layout {
-                display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 40px;
                 align-items: start;
@@ -1453,17 +1430,17 @@
                         <div class="fath-divider"></div>
                         <div class="fath-price-row">
                             <div>
-                                <div class="fath-price-lbl">Harga Mulai</div>
-                                <div class="fath-price-val">Rp 400 Jt <span
+                                <div class="fath-price-lbl">Harga</div>
+                                <div class="fath-price-val">Rp 590 Jt <span
                                         style="font-size: 15px; color: #d4930a">an</span></div>
                                 <div class="fath-price-note">*Harga spesial pre-launching</div>
                             </div>
                             <div class="fath-badge-promo">🎉 Early Bird</div>
                         </div>
                         <div class="fath-cta">
-                            <button class="fath-btn-gold"
-                                onclick="document.getElementById('fath-form-section').scrollIntoView({ behavior: 'smooth', block: 'center' })">Daftar
-                                Sekarang</button>
+                            <a class="fath-btn-gold text-center" href="/the-fath.html">
+                                Info Lengkap
+                            </a>
                             <button class="fath-btn-outline"
                                 onclick="window.open('https://wa.me/6281231186234?text=Halo,%20saya%20tertarik%20dengan%20Cluster%20The%20Fath.%20Boleh%20info%20lebih%20lanjut%3F', '_blank')">💬
                                 WA</button>
@@ -1471,85 +1448,7 @@
                     </div>
                 </div>
 
-                <!-- Right: Heading + Countdown + Progress + Form -->
-                <div class="fath-right">
-                    <div>
-                        <div class="fath-eyebrow"><span></span> Upcoming Launch</div>
-                        <div class="fath-title">Segera <em>Hadir</em> untuk Keluarga Anda</div>
-                        <div class="fath-rdesc">
-                            Cluster The Fath hadir sebagai hunian terbaru The OSO dengan konsep modern yang memadukan
-                            kenyamanan, keamanan, dan keindahan alam. Daftarkan diri Anda sekarang dan dapatkan harga
-                            pre-launching eksklusif
-                            sebelum dibuka untuk umum.
-                        </div>
-                    </div>
 
-                    <!-- Countdown -->
-                    <div class="fath-cd-box">
-                        <div class="fath-cd-label">Hitung Mundur Launching</div>
-                        <div class="fath-cd-grid">
-                            <div class="fath-cd-item"><span class="fath-cd-num" id="fath-cd-days">00</span><span
-                                    class="fath-cd-lbl">Hari</span></div>
-                            <div class="fath-cd-item"><span class="fath-cd-num" id="fath-cd-hours">00</span><span
-                                    class="fath-cd-lbl">Jam</span></div>
-                            <div class="fath-cd-item"><span class="fath-cd-num" id="fath-cd-mins">00</span><span
-                                    class="fath-cd-lbl">Menit</span></div>
-                            <div class="fath-cd-item"><span class="fath-cd-num" id="fath-cd-secs">00</span><span
-                                    class="fath-cd-lbl">Detik</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Ketersediaan -->
-                    <div class="fath-avail-box">
-                        <div class="fath-avail-hdr">
-                            <span class="fath-avail-title">Kuota Pre-Registrasi</span>
-                            <span class="fath-avail-pct" id="fath-avail-pct">0%</span>
-                        </div>
-                        <div class="fath-progress-bar">
-                            <div class="fath-progress-fill" id="fath-progress-fill"></div>
-                        </div>
-                        <div class="fath-avail-note">⚡ Kuota terbatas — <strong style="color: #f5c842">&nbsp;23 dari 40
-                                slot</strong>&nbsp; sudah terisi</div>
-                    </div>
-
-                    <!-- Form -->
-                    <div class="fath-form-box" id="fath-form-section">
-                        <div id="fath-form-content">
-                            <div class="fath-form-title">🏠 Pre-Registrasi Sekarang</div>
-                            <div class="fath-form-desc">Isi data berikut dan tim kami akan menghubungi Anda dengan
-                                informasi eksklusif &amp; penawaran harga terbaik.</div>
-                            <div class="fath-form-row">
-                                <div class="fath-form-group"><input class="fath-input" type="text" id="fath-nama"
-                                        placeholder="Nama Lengkap" /></div>
-                                <div class="fath-form-group"><input class="fath-input" type="tel" id="fath-hp"
-                                        placeholder="No. WhatsApp" /></div>
-                            </div>
-                            <div class="fath-form-group"><input class="fath-input" type="text" id="fath-kota"
-                                    placeholder="Kota Asal (opsional)" /></div>
-                            <div class="fath-form-group">
-                                <select class="fath-input" id="fath-minat" style="cursor: pointer">
-                                    <option value="" disabled selected style="background: #1a1000">Tujuan Pembelian
-                                    </option>
-                                    <option value="Hunian Pribadi" style="background: #1a1000">Hunian Pribadi</option>
-                                    <option value="Investasi" style="background: #1a1000">Investasi</option>
-                                    <option value="Keduanya" style="background: #1a1000">Hunian + Investasi</option>
-                                </select>
-                            </div>
-                            <button class="fath-btn-submit" id="fath-btn-submit" onclick="fathSubmitForm()">Daftar &amp;
-                                Dapatkan Penawaran Eksklusif →</button>
-                            <div class="fath-form-privacy">🔒 Data Anda aman dan tidak akan disebarkan</div>
-                        </div>
-                        <div class="fath-form-success" id="fath-form-success">
-                            <span class="fath-success-icon">🎉</span>
-                            <div class="fath-success-title">Registrasi Berhasil!</div>
-                            <div class="fath-success-desc">
-                                Terima kasih! Tim marketing The OSO akan segera menghubungi Anda via WhatsApp dengan
-                                informasi eksklusif Cluster The Fath.<br /><br /><strong style="color: #f5c842">Pantau
-                                    terus untuk update launching!</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -1938,7 +1837,8 @@
             <label for="dp">DP(%)</label>
             <input id="dp" type="number" placeholder="DP (%)" value="10" class="w-full border p-2 mb-2" />
             <label for="bunga">Bunga(%)</label>
-            <input id="bunga" type="number" placeholder="Bunga (%)" readonly value="2.5" class="w-full border p-2 mb-2" />
+            <input id="bunga" type="number" placeholder="Bunga (%)" value="2.5"
+                class="w-full border p-2 mb-2" />
             <label for="tenor">Tenor(Tahun)</label>
             <select name="tenor" class="w-full border p-2 mb-2" id="tenor">
                 <option value="25" selected>25 Tahun</option>
@@ -2133,7 +2033,7 @@
                 disableOnInteraction: false,
                 pauseOnMouseEnter: false,
             },
-            
+
             breakpoints: {
                 640: { slidesPerView: 2 },
                 1024: { slidesPerView: 4 },
